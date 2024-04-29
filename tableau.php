@@ -25,7 +25,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'supprimer' && isset($_GET['id
 	<style>
 		.table {
 			border-collapse: collapse;
-			width: 10%;
+			width: 11%;
 		}
 
 		.table th,
@@ -35,7 +35,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'supprimer' && isset($_GET['id
 		}
 
 		.table tr:nth-child(even) {
-			background-color: #ffff;
+			background-color: pink;
 		}
 
 		.table th {
