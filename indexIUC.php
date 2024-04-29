@@ -18,14 +18,14 @@ if (isset($_POST['submit'])) {
 	 
 }
 
-// Recherche des demandes
+// Rechercher des demandes
 $requeteEtudiants = $bdd->query('SELECT * FROM etudiant ORDER BY id DESC');
 $etudiants = $requeteEtudiants->fetchAll();
 
 if (isset($_GET['action']) && $_GET['action'] === 'supprimer' && isset($_GET['id'])) {
     $idUtilisateur = $_GET['id'];
 
-    // Supprimer l'utilisateur de la base de données
+    // Supprimer un utilisateur de la base de données
     $requeteSuppression = $bdd->prepare("DELETE FROM etudiant WHERE id = :id");
     $requeteSuppression->bindParam(':id', $idUtilisateur);
     $requeteSuppression->execute();
@@ -41,7 +41,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'supprimer' && isset($_GET['id
 <html lang="en">
 <head>
 
-	<title>FORMULAIRE</title>
+	<title>FORMULAIRES</title>
 
 </head>
 <body>
@@ -86,14 +86,14 @@ body{
   width: 100%;
   background:lightblue;
   margin: 20px auto;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  box-shadow: 1px 2px 2px rgba(0,0,0,0.125);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 .wrapper .title{
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 240px;
+  font-weight: 70;
   margin-bottom: 25px;
   color: green;
   text-transform: uppercase;
@@ -105,7 +105,7 @@ body{
 }
 
 .wrapper .form .inputfield{
-  margin-bottom: 15px;
+  margin-bottom: 150px;
   display: flex;
   align-items: center;
 }
